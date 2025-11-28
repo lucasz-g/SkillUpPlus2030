@@ -44,11 +44,22 @@ O aplicativo implementa uma **estrutura de navegação híbrida** (Stack, Drawer
 
 ## Configuração do Emulador Android
 
-O projeto foi validado usando a seguinte configuração de Dispositivo Virtual (AVD):
+O projeto foi desenvolvido usando a seguinte configuração de Dispositivo Virtual (AVD):
 
 * **Dispositivo:** **Pixel 5**
 * **API do Sistema:** **API 33 (Android 13.0 - Tiramisu)**
 * **Arquitetura:** **x86_64**
+
+No entanto, durante os testes em ambiente nativo simulado (Emulador Android - Pixel 5 / API 33), identificou-se uma limitação técnica relacionada ao ambiente de execução do Expo Go.
+
+Diagnóstico do Problema: Na primeira execução do aplicativo foi detectada uma inconsistência crítica de versões na biblioteca react-native-reanimated (dependência essencial para o Drawer Navigator), gerando o erro "Worklets Mismatch". 
+
+Este erro ocorre devido a um descompasso entre a versão da biblioteca JavaScript instalada no projeto (v0.6.1) e a versão do binário nativo pré-compilado presente no aplicativo Expo Go do emulador (v0.5.1).
+ERROR  [WorkletsError: [Worklets] Mismatch between JavaScript part and native part of Worklets (0.6.1 vs 0.5.1).
+    See `https://docs.swmansion.com/react-native-worklets/docs/guides/troubleshooting#mismatch-between-javascript-part-and-native-part-of-worklets` for more details.]
+
+
+Comportamento da Aplicação: É importante ressaltar que este erro não bloqueia a lógica da aplicação. Ao interagir com a interface de depuração do Expo Go e selecionar as opções "Minimize" ou "Dismiss", o erro é ocultado e é possível prosseguir com a navegação normalmente entre as telas de Login, Home, Trilhas e Perfil. Isso corrobora que a estrutura de rotas e a lógica de negócios estão funcionais, sendo a falha isolada exclusivamente na camada de animação nativa do Drawer.
 
 ## Estrutura de Diretórios
 
