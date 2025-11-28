@@ -42,13 +42,9 @@ O aplicativo implementa uma **estrutura de navegação híbrida** (Stack, Drawer
 *   **Persistência de Dados:** `@react-native-async-storage/async-storage`
 *   **Componentes:** `View`, `ScrollView`, `TextInput`, `Text`, `Button`, `Image`, `StyleSheet`, `TouchableOpacity`, `Alert`, `Picker`.
 
-## Configuração do Emulador Android
 
-O projeto foi desenvolvido usando a seguinte configuração de Dispositivo Virtual (AVD):
-
-* **Dispositivo:** **Pixel 5**
-* **API do Sistema:** **API 33 (Android 13.0 - Tiramisu)**
-* **Arquitetura:** **x86_64**
+## Ambiente de Desenvolvimento
+O aplicativo SkillUpPlus 2030+ teve sua lógica de negócios, estrutura de navegação híbrida (Stack, Drawer e Tabs) e persistência de dados validados com sucesso na plataforma Web, conforme evidenciado nas capturas de tela apresentadas no relatório. O funcionamento na Web comprova a integridade do código JavaScript/TypeScript e a correta implementação dos componentes do React Native e Expo Router.
 
 No entanto, durante os testes em ambiente nativo simulado (Emulador Android - Pixel 5 / API 33), identificou-se uma limitação técnica relacionada ao ambiente de execução do Expo Go.
 
