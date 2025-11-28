@@ -55,6 +55,8 @@ No entanto, durante os testes em ambiente nativo simulado (Emulador Android - Pi
 Diagnóstico do Problema: Na primeira execução do aplicativo foi detectada uma inconsistência crítica de versões na biblioteca react-native-reanimated (dependência essencial para o Drawer Navigator), gerando o erro "Worklets Mismatch". 
 
 Este erro ocorre devido a um descompasso entre a versão da biblioteca JavaScript instalada no projeto (v0.6.1) e a versão do binário nativo pré-compilado presente no aplicativo Expo Go do emulador (v0.5.1).
+
+
 ERROR  [WorkletsError: [Worklets] Mismatch between JavaScript part and native part of Worklets (0.6.1 vs 0.5.1).
     See `https://docs.swmansion.com/react-native-worklets/docs/guides/troubleshooting#mismatch-between-javascript-part-and-native-part-of-worklets` for more details.]
 
@@ -109,7 +111,7 @@ Para configurar e executar o projeto, siga os passos abaixo:
 
 -----
 
-### Observação Adicional (Opcional, mas Útil)
+### Observação Adicional
 
 > **⚠️ Nota sobre o ambiente Android:**
 >
